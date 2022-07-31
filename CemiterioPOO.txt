@@ -1,0 +1,21 @@
+Classes:
+
+Pessoa
+Funcionário
+Familiar
+Falecido
+Funcionário:
+	Funções: Porteiro, coveiro, gerente, operador de forno crematório, 
+	
+	
+	
+Cemitério
+
+corpo sepuldado provisóriamente 37 meses -> exumação
+
+família tem 3 opções:
+
+- Jazida de concessão
+- Transfere para outro cemitério
+- Guarda na caixa de sapatos -> não pode abrir
+
