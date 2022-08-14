@@ -1,0 +1,2 @@
+public class Ossuario {
+}
