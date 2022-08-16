@@ -1,6 +1,8 @@
 import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
+import java.util.concurrent.TimeUnit;
 
 public class Falecido extends Pessoa implements DadosPessoais{
 
@@ -21,6 +23,7 @@ public class Falecido extends Pessoa implements DadosPessoais{
         this.dataEnterro = dataEnterro;
         this.ocupacao = ocupacao;
         this.religiao = religiao;
+        Falecido.numFalecidos += 1;
         falecidoArrayList.add(this);
     }
 
@@ -43,7 +46,18 @@ public class Falecido extends Pessoa implements DadosPessoais{
 
     @Override
     public String getIdade() {
-        return null;
+        Calendar c = Calendar.getInstance();
+        Date dataAgora = c.getTime();
+
+        long diffInMilliesDead = Math.abs(dataAgora.getTime() - this.getDataNasc().getTime());
+        long diffDead = TimeUnit.DAYS.convert(diffInMilliesDead, TimeUnit.MILLISECONDS);
+        diffDead /= 365;
+
+        long diffInMilliesAlive = Math.abs(this.getDataEnterro().getTime() - this.getDataNasc().getTime());
+        long diffAlive = TimeUnit.DAYS.convert(diffInMilliesAlive, TimeUnit.MILLISECONDS);
+        diffAlive /= 365;
+
+        return this.getNome() + " foi enterrado aos " + diffAlive + " anos. Hoje, teria " + diffDead + " anos.";
     }
 
 
@@ -70,9 +84,7 @@ public class Falecido extends Pessoa implements DadosPessoais{
     public double calculaCustos(){
         if(this.plano == 1){
             return 5000;
-        } else if(this.plano == 2){
-            return 18500;
         }
-        return 0;
+        return 18500;
     }
 }

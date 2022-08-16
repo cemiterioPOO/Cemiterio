@@ -39,8 +39,8 @@ public abstract class Pessoa {
         return dataNasc;
     }
 
-    public void setEndereco(Endereco endereco) {
-        this.endereco = endereco;
+    public void setEndereco(String bairro, String rua, int numero, int quadra, String cep) {
+        this.endereco = new Endereco(bairro, rua, numero, quadra, cep);
     }
 
     @Override

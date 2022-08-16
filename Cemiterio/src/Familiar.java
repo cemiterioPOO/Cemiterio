@@ -32,7 +32,7 @@ public class Familiar extends Pessoa implements DadosPessoais{
         long diffInMillies = Math.abs(dataAgora.getTime() - this.getDataNasc().getTime());
         long diff = TimeUnit.DAYS.convert(diffInMillies, TimeUnit.MILLISECONDS);
         diff /= 365;
-        return this.getNome() + " tem " + diff + " anos";
+        return this.getNome() + " tem " + diff + " anos.";
     }
 
     @Override
