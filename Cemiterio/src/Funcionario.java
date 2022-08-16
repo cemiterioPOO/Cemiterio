@@ -46,8 +46,10 @@ public class Funcionario extends Pessoa{
     }
 
     public static double calculaCusto(){
+        double custo = 0;
         for(Funcionario funcionario : funcionarioList){
-            
+            custo += funcionario.getRemuneracao();
         }
+        return custo;
     }
 }
