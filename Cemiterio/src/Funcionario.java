@@ -40,4 +40,16 @@ public class Funcionario extends Pessoa{
         }
         return custo;
     }
+
+    public Object[] getInfo(){
+        Object[] arrayInfo = new Object[9];
+        Object[] arrayAux = getInfoGeral();
+
+        System.arraycopy(arrayAux, 0, arrayInfo, 0, 7);
+
+        arrayAux[7] = this.funcao;
+        arrayAux[8] = this.remuneracao;
+
+        return arrayInfo;
+    }
 }

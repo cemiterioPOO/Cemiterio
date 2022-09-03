@@ -13,4 +13,14 @@ public class Endereco {
         this.cep = cep;
     }
 
+    @Override
+    public String toString() {
+        return "Endereco{" +
+                "bairro='" + bairro + '\'' +
+                ", rua='" + rua + '\'' +
+                ", numero=" + numero +
+                ", quadra=" + quadra +
+                ", cep='" + cep + '\'' +
+                '}';
+    }
 }

@@ -77,4 +77,15 @@ public class Testes {
         assertEquals(Funcionario.calculaCusto(), 9500, 0);
     }
 
+    @Test
+    public void testGetInfo() throws ParseException{
+        SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
+        Date dataNascFal = sdf.parse("09/03/2000");
+        Date dataEnterroFal = sdf.parse("27/11/2020");
+        Falecido falecido = new Falecido("Jamal", "Fuleco", "04931490844", dataNascFal, 'M', "Casado", "Alphaville", "RX 9", 12, 12, "74424090", 1, dataEnterroFal, "Policial", "Cristianismo");
+
+        Object[] arrayObject = falecido.getInfo();
+        System.out.println(arrayObject[9]);
+    }
+
 }

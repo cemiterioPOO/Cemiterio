@@ -60,7 +60,6 @@ public class Falecido extends Pessoa implements DadosPessoais{
         return this.getNome() + " foi enterrado aos " + diffAlive + " anos. Hoje, teria " + diffDead + " anos.";
     }
 
-
     public List<Familiar> getFamiliarList() {
         return familiarList;
     }
@@ -86,5 +85,20 @@ public class Falecido extends Pessoa implements DadosPessoais{
             return 5000;
         }
         return 18500;
+    }
+    
+    public Object[] getInfo(){
+        Object[] arrayInfo = new Object[12];
+        Object[] arrayAux = getInfoGeral();
+
+        System.arraycopy(arrayAux, 0, arrayInfo, 0, 7);
+
+        arrayInfo[7] = this.getId();
+        arrayInfo[8] = this.getPlano();
+        arrayInfo[9] = this.getDataEnterro();
+        arrayInfo[10] = this.getOcupacao();
+        arrayInfo[11] = this.getReligiao();
+
+        return arrayInfo;
     }
 }

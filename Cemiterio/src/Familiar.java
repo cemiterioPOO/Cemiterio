@@ -65,4 +65,17 @@ public class Familiar extends Pessoa implements DadosPessoais{
     public void setTelefone(String telefone) {
         this.telefone = telefone;
     }
+
+    public Object[] getInfo(){
+        Object[] arrayInfo = new Object[10];
+        Object[] arrayAux = getInfoGeral();
+
+        System.arraycopy(arrayAux, 0, arrayInfo, 0, 7);
+
+        arrayAux[7] = this.telefone;
+        arrayAux[8] = this.ocupacao;
+        arrayAux[9] = this.religiao;
+
+        return arrayInfo;
+    }
 }
