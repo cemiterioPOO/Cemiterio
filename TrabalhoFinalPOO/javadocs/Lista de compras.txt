@@ -1,0 +1,41 @@
+-> Frutas, Legumes e Verduras:
+
+- Tomate;
+- Beterraba;
+- Repolho;
+- Brócolis;
+- Cebola;
+- Pepino;
+- Limão;
+- Acelga;
+- Maça;
+- Melancia;
+- Goiaba.
+
+-> Bebidas:
+
+- Chás;
+- Suco de Uva;
+- Água tônica sem açúcar.
+
+-> Condimentos e temperos:
+
+- Ketchup;
+- Alho;
+- Ervas;
+- Azeitona;
+- Óleo de Gergelim.
+
+-> Limpeza:
+
+- Sacos plásticos;
+- Sabão em pó;
+- Amaciante;
+
+-> Demais categorias:
+
+- Ovos;
+- Biscoitos congelados;
+- Bolachas;
+- Filtro de Café;
+- Café.
